@@ -107,8 +107,9 @@
   </section>
 
   <!-- UPCOMING BIRTHDAYS -->
-  <section v-if="upcomingBirthdays.length" id="birthdays" class="py-16 bg-gradient-to-r from-indigo-50 to-indigo-50">
-    <div class="max-w-6xl mx-auto px-4 text-center">
+  <section id="birthdays" class="py-16 bg-gradient-to-r from-indigo-50 to-indigo-50">
+    
+    <div v-if="upcomingBirthdays.length > 0" class="max-w-6xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold text-gray-800 mb-8">🎂 Upcoming Birthdays</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <div v-for="member in upcomingBirthdays" :key="member.name"
@@ -123,6 +124,12 @@
           </div>
         </div>
       </div>
+    </div>
+    <div v-else class="max-w-6xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8">🎂 Upcoming Birthdays</h2>
+      <p class="text-gray-600 mt-1">
+            upcoming birthdays in the next 30 days.
+          </p>
     </div>
   </section>
 
@@ -199,7 +206,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          {{ computeAge(selectedMember.birthdate) }} yrs
+          {{ computeAge(selectedMember.birthdate) }}
         </span>
       </p>
 
