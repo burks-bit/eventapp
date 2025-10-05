@@ -128,7 +128,7 @@
     <div v-else class="max-w-6xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold text-gray-800 mb-8">🎂 Upcoming Birthdays</h2>
       <p class="text-gray-600 mt-1">
-        Np upcoming birthdays in the next 30 days.
+        There are no upcoming birthdays right now. 🎉 Take this moment to celebrate your loved ones!
       </p>
     </div>
   </section>
